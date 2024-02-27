@@ -1,0 +1,660 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.body-no-scroll {
+    overflow: hidden; /* Отключает прокрутку на странице */
+    height: 100%; /* Задаёт фиксированную высоту */
+}
+
+.container {
+    max-width: 1200px;
+    min-width: 960px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Шапка */
+header {
+    background-color: #007bff; /* Измените на желаемый цвет */
+    color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Убедитесь, что шапка всегда наверху */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Небольшая тень для выделения */
+}
+
+header .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 5px;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Основное содержимое */
+main {
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Формы обратной связи */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Добавляет padding в общую ширину и высоту элемента, обеспечивая более предсказуемое расположение */
+}
+
+.form-group textarea {
+    resize: vertical; /* Позволяет пользователю изменять размер только по вертикали */
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/*Стили для Главной секции*/
+#welcome {
+    background-color: #e8effc;
+    padding: 40px 0;
+}
+
+#welcome > .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+#welcome > h2 {
+    color: #2a2f45;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+#welcome > p {
+    color: #4a4f5c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.features {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
+    padding: 20px;
+}
+
+.features h3 {
+    color: #2a2f45;
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features li {
+    padding: 5px 0;
+    color: #4a4f5c;
+}
+
+/* Стили для секции teacher */
+/* Стили для обертки списка преподавателей */
+/* Очистка float */
+
+#teachersList::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.teacher-item {
+    float: left;
+    width: 23%;
+    margin: 1%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 350px; /* Пример фиксированной высоты */
+    overflow: hidden; /* Скрывает содержимое, выходящее за пределы карточки */
+    text-align: center;
+}
+
+/* Стилизация фотографии преподавателя */
+.teacher-photo {
+    width: 100px; /* Ширина фото */
+    height: 100px; /* Высота фото */
+    border-radius: 50%; /* Делаем фото круглым */
+    object-fit: cover; /* Обрезка фото для заполнения контейнера */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+/* Стили для текстовой информации о преподавателе */
+.teacher-info h3, .teacher-info p {
+    text-align: center;
+    margin: 5px 0; /* Небольшой отступ для заголовков и абзацев */
+}
+
+/* Стилизация кнопки "Задать вопрос" */
+#askQuestionBtn {
+    display: block; /* Позволяет применить margin: auto */
+    width: auto; /* Ширина кнопки будет определяться её содержимым */
+    padding: 10px 20px; /* Внутренние отступы для увеличения размера кнопки */
+    margin: 20px auto; /* Верхний и нижний отступы 20px, auto по бокам для центрирования */
+    background-color: #007bff; /* Синий фон кнопки */
+    color: white; /* Белый текст */
+    border: none; /* Убрать стандартную рамку кнопки */
+    border-radius: 5px; /* Скруглённые углы */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    font-size: 16px; /* Размер шрифта текста в кнопке */
+}
+
+.intro-text {
+    font-size: 18px; /* Увеличиваем размер шрифта для лучшей читаемости */
+    color: #333; /* Темно-серый цвет текста для улучшения контраста */
+    margin-bottom: 20px; /* Добавляем отступ снизу для визуального разделения текста и кнопки */
+    padding: 0 15px; /* Паддинги по бокам для предотвращения прилипания текста к краям контейнера */
+    text-align: justify; /* Выравниваем текст по ширине для более аккуратного вида */
+    line-height: 1.6; /* Увеличиваем межстрочный интервал для лучшей читаемости */
+    border-left: 4px solid #007bff; /* Добавляем левую границу для выделения */
+    background-color: #f9f9f9; /* Светлый фоновый цвет для выделения абзаца */
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1); /* Небольшая тень для добавления глубины */
+}
+
+#askQuestionBtn:hover {
+    background-color: #0056b3; /* Темно-синий фон при наведении */
+}
+
+/* Стиль модального окна */
+.modal {
+    display: none; /* Скрыть модальное окно по умолчанию */
+    position: fixed; /* Оставаться на месте при прокрутке */
+    z-index: 1000; /* Сидеть над другими элементами */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: hidden; /* Отключить прокрутку внутри модального окна */
+    background-color: rgba(0,0,0,0.4); /* Черный с небольшой прозрачностью */
+}
+
+
+/* Стиль контента модального окна */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% от верха и центрировано по горизонтали */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Можете настроить ширину */
+    max-width: 600px; /* Максимальная ширина */
+    border-radius: 5px; /* Скругленные углы */
+}
+
+/* Стилизация выпадающего списка */
+select {
+    display: block;
+    width: 100%; /* Занимает всю ширину контейнера */
+    padding: 8px 10px; /* Паддинги для удобства */
+    margin-bottom: 10px; /* Отступ снизу */
+    font-size: 16px; /* Размер текста */
+    line-height: 1.5;
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 5px; /* Скруглённые углы */
+    -webkit-appearance: none; /* Убираем стандартный стиль в WebKit-браузерах */
+    -moz-appearance: none; /* Убираем стандартный стиль в Firefox */
+    appearance: none; /* Убираем стандартный внешний вид */
+    background-color: #fff; /* Фоновый цвет */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12"><polygon fill="rgba(0, 0, 0, 0.5)" points="1,1 7,9 13,1 "/></svg>'); /* Иконка стрелки */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Позиционирование иконки стрелки */
+    background-size: 14px; /* Размер иконки стрелки */
+    cursor: pointer; /* Курсор в виде указателя */
+}
+
+/* Стилизация при фокусе на select */
+select:focus {
+    outline: none; /* Убираем стандартную обводку при фокусе */
+    border-color: #64B5F6; /* Цвет границы при фокусе */
+}
+
+/* Стиль кнопки закрытия */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стили для формы внутри модального окна */
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#showTeachersBtn {
+    padding: 10px 20px;
+    background-color: #007bff; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем стандартную рамку */
+    border-radius: 5px; /* Скругляем углы */
+    cursor: pointer; /* Курсор в виде указателя */
+    outline: none; /* Убираем контур при фокусе */
+    transition: background-color 0.3s; /* Плавное изменение цвета фона при наведении */
+}
+
+#showTeachersBtn:hover {
+    background-color: #0056b3; /* Цвет фона при наведении */
+}
+
+
+/* Стили для блога */
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.blog-post {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Обеспечивает, что изображения будут красиво обрезаны, чтобы соответствовать размерам */
+}
+
+.blog-post-content {
+    padding: 15px;
+}
+
+.blog-post-title {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.blog-post-description {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Ссылки внутри блога для улучшения навигации */
+.blog-post a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007bff;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для секции FAQ */
+.faq-item {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    padding: 15px;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    font-weight: 600;
+    color: #333;
+    background-color: #e9ecef;
+    border-radius: 5px 5px 0 0;
+}
+
+.faq-question::after {
+    content: '\002B';
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    color: #007bff;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    color: #666;
+    background-color: #fff;
+    border-top: none;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 0 0 5px 5px;
+}
+
+.faq-item:last-child .faq-answer {
+    border-radius: 0 0 5px 5px;
+}
+
+/* Анимация для ответов */
+.faq-answer {
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+    height: 0;
+}
+
+.faq-answer.active {
+    height: auto; /* Это значение будет переопределено в JavaScript */
+    display: block;
+}
+
+
+/* Отступы и выравнивание для контейнера формы */
+#contact .container {
+    max-width: 600px; /* Лимитирует максимальную ширину формы для лучшей читаемости на больших экранах */
+    margin: auto;
+}
+
+/* Карусель с новостями */
+.news-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #f0f0f0;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 15;
+}
+
+.carousel-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.carousel-indicator.active {
+    background-color: #666;
+}
+
+.carousel-caption h3 {
+    color: #ffffff; /* Ярко-белый цвет для заголовков */
+    margin: 0 0 10px; /* Добавляем нижний отступ к заголовку */
+}
+
+.carousel-caption p {
+    color: #cccccc; /* Светло-серый цвет для абзацев */
+    font-size: 16px; /* Увеличиваем размер шрифта для лучшей читаемости */
+}
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: #ffffff; /* Светлый текст на темном фоне */
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-section h3, .footer-section a, .footer-section p {
+    color: #ffffff; /* Убедитесь, что текст виден на фоне */
+}
+
+/* Маркер to-up */
+#toTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Адаптивность и кастомные стили */
+@media (min-width: 768px) {
+    .container {
+        padding: 20px 40px;
+    }
+
+    nav ul li {
+        margin: 0 25px;
+    }
+
+    .footer-section {
+        display: inline-block;
+        vertical-align: top;
+        width: 23%;
+        margin: 0 1%;
+        text-align: left;
+    }
+
+    .blog-post img {
+        height: 150px; /* Уменьшаем высоту изображений для маленьких экранов */
+    }
+
+    #teachersList {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки для меньших экранов */
+    }
+}
+
+@media (max-width: 480px) {
+    .container, .blog-posts {
+        padding: 10px;
+    }
+
+    .blog-post-title {
+        font-size: 18px; /* Немного уменьшаем размер заголовков для улучшения читаемости */
+    }
+
+    .blog-post-description {
+        font-size: 14px; /* Адаптируем размер текста описания */
+    }
+
+    #teachersList {
+        grid-template-columns: 1fr; /* 1 колонка для очень маленьких экранов */
+    }
+}
+
+#courses, #blog, #news {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.course-list, .news-list, .blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.course-item, .teacher-item, .news-item, .blog-post {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Основной стиль скроллбара */
+::-webkit-scrollbar {
+    width: 8px; /* Ширина скроллбара */
+    height: 1px; /* Высота скроллбара для горизонтального скроллинга */
+}
+
+/* Стиль трека (дорожки), по которой движется скроллбар */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Светлый фон трека */
+    border-radius: 10px; /* Закругленные углы трека */
+}
+
+/* Стиль ручки скроллбара */
+::-webkit-scrollbar-thumb {
+    background: rgba(50, 50, 250, 0.8); /* Синий цвет ручки */
+    border-radius: 10px; /* Закругленные углы ручки */
+}
+
+/* Стиль ручки скроллбара при наведении */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(50, 50, 250, 1); /* Немного темнее синий цвет при наведении */
+}

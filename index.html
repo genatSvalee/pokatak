@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информатика для школьников</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><img src="images/general/logo.png" alt="Логотип"></div>
+            <nav>
+                <ul>
+                    <li><a href="#welcome">Главная</a></li>
+                    <li><a href="#courses">Курсы</a></li>
+                    <li><a href="#teachers">Преподаватели</a></li>
+                    <li><a href="#news">Новости</a></li>
+                    <li><a href="#blog">Блог</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>    
+    <main>
+        <section id="welcome">
+            <div class="container">
+                <h2>Добро пожаловать на наш учебный сайт по информатике!</h2>
+                <p>Здесь вы найдете курсы по программированию, компьютерной графике, веб-разработке и многое другое. Наша миссия - сделать информатику доступной для каждого школьника.</p>
+                <p>В современном мире знания в области информатики открывают огромные возможности. Они необходимы не только для карьеры в IT-сфере, но и для развития логического мышления, критического анализа и решения сложных задач.</p>
+                <div class="features">
+                    <h3>Наши преимущества</h3>
+                    <ul>
+                        <li>Индивидуальный подход к обучению</li>
+                        <li>Широкий выбор курсов</li>
+                        <li>Поддержка опытных наставников</li>
+                        <li>Гибкий график обучения</li>
+                    </ul>
+                </div>
+                <p>Не упустите шанс стать частью нашего увлекательного образовательного процесса. Присоединяйтесь к нашему сообществу уже сегодня и начните свое путешествие в мир информатики!</p>
+            </div>
+        </section>             
+        <section id="courses">
+            <div class="container">
+                <h2>Наши курсы</h2>
+                <div>
+                    <h3>Основы программирования</h3>
+                    <p>Изучите Python с нуля и создайте свой первый проект за несколько недель.</p>
+                </div>
+                <div>
+                    <h3>Веб-разработка для начинающих</h3>
+                    <p>Научитесь создавать веб-сайты, используя HTML, CSS и JavaScript.</p>
+                </div>
+                <div>
+                    <h3>Продвинутое программирование</h3>
+                    <p>Погрузитесь в алгоритмы, структуры данных и принципы объектно-ориентированного программирования.</p>
+                </div>
+            </div>
+        </section>
+        <section id="teachers">
+            <div class="container">
+                <h2>Наши преподаватели</h2>
+                <p class="intro-text">Наши курсы преподаются опытными специалистами в области информатики, каждый из которых обладает уникальным набором знаний и практическим опытом.</p>
+                <button id="showTeachersBtn" onclick="toggleTeachers()">Показать всех преподавателей ↓</button>
+                <div id="teachersList" style="display:none;">
+                    <div class="teacher-item">
+                        <img src="images/teachers/photo_2024-02-20_22-26-56.jpg" alt="Иван Иванов" class="teacher-photo">
+                        <div class="teacher-info">
+                            <h3>Иван Алексеев</h3>
+                            <p>Специалист по программированию с 10-летним опытом. Эксперт в области Python и алгоритмов.</p>
+                        </div>
+                    </div>
+                    <div class="teacher-item">
+                        <img src="images/teachers/photo_2024-02-20_22-56-53.jpg" alt="Мария Семенова" class="teacher-photo">
+                        <div class="teacher-info">
+                            <h3>Мария Семенова</h3>
+                            <p>Мария — ведущий разработчик с более чем 12-летним опытом работы в области мобильных и веб-технологий.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="teacher-item">
+                        <img src="images/teachers/photo_2024-02-20_22-56-57.jpg" alt="Алексей Петров" class="teacher-photo">
+                        <div class="teacher-info">
+                            <h3>Алексей Петров</h3>
+                            <p>Эксперт по искусственному интеллекту и машинному обучению, Алексей ведет курсы по передовым технологиям.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="teacher-item">
+                        <img src="images/teachers/photo_2024-02-20_22-56-56.jpg" alt="Екатерина Волкова" class="teacher-photo">
+                        <div class="teacher-info">
+                            <h3>Екатерина Волкова</h3>
+                            <p>Специалист по базам данных и системам управления базами данных, Екатерина обладает глубокими знаниями в области SQL и NoSQL.</p>
+                        </div>
+                    </div>
+                    <div class="teacher-item">
+                        <img src="images/teachers/photo_2024-02-20_22-58-59 (2).jpg" alt="Дмитрий Новиков" class="teacher-photo">
+                        <div class="teacher-info">
+                            <h3>Дмитрий Новиков</h3>
+                            <p>Дмитрий — специалист по кибербезопасности с более чем 15-летним опытом. Он помогает студентам разобраться в тонкостях защиты информации.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="teacher-item">
+                        <img src="images/teachers/photo_2024-02-20_22-56-54.jpg" alt="Ольга Кузнецова" class="teacher-photo">
+                        <div class="teacher-info">
+                            <h3>Ольга Кузнецова</h3>
+                            <p>Опытный дизайнер пользовательских интерфейсов, Ольга преподает курсы по UI/UX дизайну, помогая студентам создавать интуитивно понятные и красивые веб-сайты и приложения.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="teacher-item">
+                        <img src="images/teachers/photo_2024-02-20_22-58-59.jpg" alt="Антон Сергеев" class="teacher-photo">
+                        <div class="teacher-info">
+                            <h3>Антон Сергеев</h3>
+                            <p>Антон ведет курсы по разработке на JavaScript и фреймворку React. Он делится с студентами современными подходами к созданию динамичных веб-приложений.</p>
+                        </div>
+                    </div>
+
+                    <div class="teacher-item">
+                        <img src="images/teachers/photo_2024-02-20_22-58-59.jpg" alt="Антон Сергеев" class="teacher-photo">
+                        <div class="teacher-info">
+                            <h3>Антон Сергеев</h3>
+                            <p>Антон ведет курсы по разработке на JavaScript и фреймворку React. Он делится с студентами современными подходами к созданию динамичных веб-приложений.</p>
+                        </div>
+                    </div>
+                    <button id="askQuestionBtn" onclick="openQuestionForm()">Задать вопрос</button>
+                </div>
+            </div>
+        </section>        
+        <section id="news">
+            <div class="container">
+                <h2>Последние новости</h2>
+                <div class="news-carousel">
+                    <div class="carousel-item active">
+                        <img src="images/news/AI.png" alt="AI">
+                        <div class="carousel-caption">
+                            <h3>Революция в области ИИ: новый алгоритм обещает ускорить разработку на 50%</h3>
+                            <p>Разрабочики компании openAI представили новый алгоритм искусственного интеллекта.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/news/medicine.jpg" alt="medicine">
+                        <div class="carousel-caption">
+                            <h3>Искусственный интеллект переводит медицину на новый уровень</h3>
+                            <p>Исследователи из Принстонского университета разработали ИИ-систему, способную предсказывать развитие заболеваний за годы до первых симптомов. Это открытие обещает революционизировать предиктивную медицину.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/news/clean_energy.jpeg" alt="clean energy">
+                        <div class="carousel-caption">
+                            <h3>Чистая энергия: новая эра возобновляемых источников</h3>
+                            <p>Внедрение новой технологии солнечных панелей, которые могут собирать энергию даже в пасмурные дни, может привести к значительному снижению зависимости от ископаемого топлива.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/news/online_training.jpg" alt="online training">
+                        <div class="carousel-caption">
+                            <h3>Образование будущего: виртуальные классы стирают границы</h3>
+                            <p>Новая платформа для онлайн-обучения сочетает виртуальную реальность и адаптивное обучение, чтобы предоставить студентам по всему миру индивидуализированный учебный опыт.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/news/smart_city.jpg" alt="smart city">
+                        <div class="carousel-caption">
+                            <h3>Умные города: инновации, которые сделают жизнь проще</h3>
+                            <p>Разработчики из Силиконовой долины представили серию умных устройств, интегрируемых с инфраструктурой городов, для повышения эффективности транспорта и безопасности граждан.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/news/quantum_PC.jpg" alt="quantum PC">
+                        <div class="carousel-caption">
+                            <h3>Квантовые компьютеры: новый рубеж в области вычислений</h3>
+                            <p>Научная группа объявила о создании квантового компьютера, способного решать задачи, недоступные для современных суперкомпьютеров, что может открыть путь для новых открытий в физике и химии.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/news/electric_car.png" alt="electric car">
+                        <div class="carousel-caption">
+                            <h3>Революционные батареи: новая эра для электромобилей</h3>
+                            <p>Инновационные литий-воздушные батареи, заряжающиеся за считанные минуты и обеспечивающие автономность на сотни миль, скоро могут изменить всю индустрию электротранспорта.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/news/agricultural_industry.jpg" alt="agricultural industry">
+                        <div class="carousel-caption">
+                            <h3>Встречайте робота-фермера: автоматизация, меняющая сельское хозяйство</h3>
+                            <p>Агротехнологический стартап представил нового робота-фермера, способного ухаживать за растениями и собирать урожай, увеличивая продуктивность и устойчивость сельскохозяйственного производства.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/news/wifi.jpg" alt="wifi">
+                        <div class="carousel-caption">
+                            <h3>Следующее поколение Wi-Fi: Wi-Fi 7 обещает рекордные скорости передачи данных</h3>
+                            <p>Новый стандарт беспроводной связи Wi-Fi 7 находится на горизонте, обещая скорости, которые в несколько раз превышают текущие, благодаря новым технологиям модуляции и улучшенным протоколам.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/news/robotics.webp" alt="robotics">
+                        <div class="carousel-caption">
+                            <h3>Робототехника и автоматизация: как роботы меняют рабочее место</h3>
+                            <p>Отчет о том, как роботы и автоматизированные системы внедряются на производство и в офисы, изменяя представление о традиционной рабочей среде и увеличивая эффективность.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>     
+        <section id="blog">
+            <div class="container">
+                <h2>Блог</h2>
+                <div class="blog-posts">
+                    <div class="blog-post">
+                        <img src="images/blog/code.png" alt="code">
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Топ-5 Языков Программирования для Начинающих в 2024 Году</h3>
+                            <p class="blog-post-description">Эта статья представляет собой руководство для начинающих программистов, 
+                                которые хотят узнать, с каких языков стоит начать своё обучение в 2024 году. В статье обсуждаются 
+                                популярные языки программирования, такие как Python, JavaScript, и Ruby, с акцентом на их применение, 
+                                сообщество и доступные ресурсы для изучения.</p>
+                            <a href="blog/article_one.html" class="read-more-btn">Читать далее</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <img src="images/blog/ai.jpg" alt="ai">
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Как Искусственный Интеллект Меняет Мир Игр</h3>
+                            <p class="blog-post-description">Искусственный интеллект (ИИ) революционизирует индустрию видеоигр, от 
+                                создания более реалистичных виртуальных персонажей до адаптивного геймплея, который меняется в ответ 
+                                на действия игрока. В этой статье исследуются последние достижения в области ИИ в играх и как они 
+                                способствуют созданию более захватывающих и персонализированных игровых опытов.</p>
+                            <a href="blog/article_two.html" class="read-more-btn">Читать далее</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <img src="images/blog/programmer.jpg" alt="programmer">
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Принципы Устойчивого Программирования для Зелёных Технологий</h3>
+                            <p class="blog-post-description">Устойчивое программирование становится всё более важным по мере того, как 
+                                отрасль ИТ стремится сократить своё воздействие на окружающую среду. Эта статья обсуждает, как программисты 
+                                могут внести свой вклад в экологическую устойчивость, применяя принципы энергоэффективности, оптимизации 
+                                кода и зелёного кодинга при разработке программного обеспечения.</p>
+                            <a href="blog/article_three.html" class="read-more-btn">Читать далее</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <img src="images/blog/web.jpg" alt="web">
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Будущее Веб-Разработки: Тенденции и Технологии, которые Определят 2024 Год</h3>
+                            <p class="blog-post-description">Краткое описание: Веб-разработка постоянно эволюционирует, и знание последних 
+                                тенденций имеет решающее значение для любого разработчика. Эта статья исследует ключевые технологии и 
+                                методологии, которые будут формировать веб в 2024 году, включая прогрессивные веб-приложения (PWA), серверный 
+                                рендеринг и использование искусственного интеллекта для улучшения пользовательского опыта.</p>
+                            <a href="blog/article_four.html" class="read-more-btn">Читать далее</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <img src="images/blog/analytics.jpg" alt="analytics">
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Глубокое Обучение и Большие Данные: Как Они Переопределяют Будущее Аналитики</h3>
+                            <p class="blog-post-description">В этой статье рассматривается взаимосвязь между глубоким обучением и большими данными, 
+                                а также их роль в формировании будущего аналитики и принятия данных решений. Освещаются примеры реального применения, 
+                                включая обработку естественного языка и компьютерное зрение, и обсуждается, как компании могут использовать 
+                                эти технологии для извлечения ценных инсайтов из массивов данных.</p>
+                            <a href="blog/article_five.html" class="read-more-btn">Читать далее</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <img src="images/blog/medicine.png" alt="medicine">
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Искусственный Интеллект в Медицине: Перспективы Персонализированного Лечения</h3>
+                            <p class="blog-post-description">Эта статья исследует революционные изменения, которые искусственный интеллект вносит в 
+                                медицинскую отрасль, особенно в область персонализированного лечения. Рассматриваются примеры использования AI для анализа
+                                медицинских данных, предсказания рисков заболеваний, разработки индивидуализированных планов лечения и создания 
+                                персонализированных медицинских препаратов.</p>
+                            <a href="blog/article_six.html" class="read-more-btn">Читать далее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <section id="faq">
+            <div class="container">
+                <h2>FAQ</h2>
+                <div class="faq-item">
+                    <div class="faq-question">С какого возраста можно начать обучение?</div>
+                    <div class="faq-answer">Обучение доступно для школьников с 12 лет и старше.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Нужны ли предварительные знания?</div>
+                    <div class="faq-answer">Для начальных курсов предварительные знания не требуются.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Как можно оплатить курсы?</div>
+                    <div class="faq-answer">Оплатить курсы можно через банковскую карту на сайте, через PayPal или при помощи банковского перевода.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Есть ли у вас курсы по подготовке к ЕГЭ?</div>
+                    <div class="faq-answer">Да, у нас есть специализированные курсы по подготовке к ЕГЭ по информатике и программированию.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Могу ли я пройти курс, если я полный новичок в программировании?</div>
+                    <div class="faq-answer">Да, наши курсы разработаны так, чтобы быть доступными для людей любого уровня подготовки, включая полных новичков.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Какие материалы мне понадобятся для курса?</div>
+                    <div class="faq-answer">Вам понадобится только компьютер и доступ в интернет. Все необходимые учебные материалы предоставляются в рамках курса.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Есть ли сертификат по окончании курса?</div>
+                    <div class="faq-answer">Да, после успешного завершения курса все студенты получают сертификаты, подтверждающие их участие и освоение материала.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Могу ли я общаться с преподавателями вне уроков?</div>
+                    <div class="faq-answer">Конечно, наши преподаватели доступны для ответов на ваши вопросы и предоставления дополнительных консультаций через электронную почту или в рамках специально организованных встреч.</div>
+                </div>                
+            </div>
+        </section>        
+        <section id="contact">
+            <div class="container">
+                <h2>Свяжитесь с нами</h2>
+                <form action="submit_form.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </section>        
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>О сайте</h3>
+                <p>Этот сайт предоставляет образовательные курсы по информатике для школьников.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="#welcome">Главная</a></li>
+                    <li><a href="#courses">Курсы</a></li>
+                    <li><a href="#teachers">Преподаватели</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Социальные сети</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>Email: info@informatics-school.ru</p>
+                <p>Телефон: +7 (495) 123-45-67</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Модальное окно для вопросов -->
+    <div id="questionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h2>Задайте вопрос преподавателю</h2>
+            <form id="questionForm">
+                <div class="form-group">
+                    <label for="teacherSelect">Выберите преподавателя:</label>
+                    <select id="teacherSelect" name="teacherName" required>
+                        <option value="" disabled selected>Выберите преподавателя</option>
+                        <option value="Иван Алексеев">Иван Алексеев</option>
+                        <option value="Мария Семенова">Мария Семенова</option>
+                        <option value="Алексей Петров">Алексей Петров</option>
+                        <option value="Екатерина Волкова">Екатерина Волкова</option>
+                        <option value="Екатерина Волкова">Дмитрий Новиков</option>
+                        <option value="Екатерина Волкова">Ольга Кузнецова</option>
+                        <option value="Екатерина Волкова">Антон Сергеев</option>
+                        <option value="Екатерина Волкова">Антон Сергеев</option>
+                        <!-- Добавьте дополнительные опции для других преподавателей -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Ваш email:</label>
+                    <input type="email" id="userEmail" name="userEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="userQuestion">Ваш вопрос:</label>
+                    <textarea id="userQuestion" name="userQuestion" rows="4" required></textarea>
+                </div>
+                <input type="submit" value="Отправить">
+            </form>
+        </div>
+    </div>    
+    <img src="images/general/to_up.png" alt="Наверх" style="width:50px; height:50px;" id="toTop">
+</body>
+</html>
